@@ -3,8 +3,13 @@
 <head>
 <title>This is MY website. .</title>
 <script> 
-function checkName(){ 
-alert("Nice Name!!:  "+username.value)}
+function checkName() {
+    if (username.value.length < 3) {
+        alert("your name is too short:  " + username.value);
+    } else if (username.value.length > 7) {
+        alert("your name is too long:  " + username.value);
+    } else alert("your name is perfect:");
+}
 </script>
 </head>
 <body>
