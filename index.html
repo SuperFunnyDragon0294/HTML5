@@ -4,18 +4,30 @@
 <title>This is MY website. .</title>
 <script> 
 function checkName() {
-    if (username.value.length < 3) {
+    if (username.value.length < 2) {
         alert("your name is too short:  " + username.value);
-    } else if (username.value.length > 7) {
+    } else if (username.value.length > 9) {
         alert("your name is too long:  " + username.value);
     } else alert("your name is perfect:");
 }
+function checkAge() {
+    if (age.value<5 ) {
+        alert("your age does not qualify :  " + age.value);
+    } else if (age.value> 30) {
+        alert("your age does not qualify:  " + age.value);
+    } else alert("your age is perfect:");
+}
+function checkPassword(){
+               //password must be 8-20 chacters long
+               //password must have both lower and uppercase letters
+               //password must have a number
 </script>
 </head>
 <body>
 <h1>Dowload something fun</h1>
-<p>Please enter your first and last name and select your age
+<p>Please enter your name and select your age
 <input type="text" id="username" onchange="checkName()">
+<input type="number" id="age" onchange="checkAge()"
 <input type="number">
 <p>Whats is your email and password. We won't share or use it.
 <input type="search">
