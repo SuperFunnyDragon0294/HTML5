@@ -18,9 +18,17 @@ function checkAge() {
     } else alert("your age is perfect:");
 }
 function checkPassword(){
-               //password must be 8-20 chacters long
+  if (password.value.length <8)
+                //password must be 8-20 chacters long
+  alert ("A good password should have up to 8 letters or numbers.");
                //password must have both lower and uppercase letters
                //password must have a number
+               if (password.value.length >15)
+                //password must be 8-20 chacters long
+  alert ("A good password should have less than 15 letters or numbers.");
+               //password must have both lower and uppercase letters
+               //password must have a number
+}
 </script>
 </head>
 <body>
@@ -30,12 +38,8 @@ function checkPassword(){
 <input type="number" id="age" onchange="checkAge()"
 <input type="number">
 <p>Whats is your email and password. We won't share or use it.
-<input type="search">
-<input type="password">
-<p>Please make up a username a password for this website.
-<input type="search">
-<input type="password">
-<p>Remember them because they are importaint on this website
+<input type="text">
+<input type="password" id="password" onchange="checkPassword()">
   <p>Please enter the file you want your fun thing to download in <input type="file"></h3>
 <h3>Downoload in one click:</h3><button type="button" onclick="alert('Hooray! You downloaded something fun! ')">Download the fun thing</button> 
  <p>Did you like your fun thing???
