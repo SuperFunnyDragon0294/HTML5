@@ -26,8 +26,14 @@ function checkPassword(){
                if (password.value.length >15)
                 //password must be 8-20 chacters long
   alert ("A good password should have less than 15 letters or numbers.");
-               //password must have both lower and uppercase letters
+               //password must haveboth lower and uppercase letters
+
+               let ps=password.value
+              let isalllowercase= ps==ps.toLowerCase()
+              let isallUpperCase= ps==ps.toUpperCase()
+              if(isalllowercase || isallUpperCase){alert ("Your password must have both upper and lower case letters.")}
                //password must have a number
+          
 }
 </script>
 </head>
@@ -41,12 +47,12 @@ function checkPassword(){
 <input type="text">
 <input type="password" id="password" onchange="checkPassword()">
   <p>Please enter the file you want your fun thing to download in <input type="file"></h3>
-<h3>Downoload in one click:</h3><button type="button" onclick="alert('Hooray! You downloaded something fun! ')">Download the fun thing</button> 
+<h3>Downoload in one click:</h3><button type="button" onclick="alert('Hooray! You downloaded something fun! Go find it in the file you chose. ')">Download the fun thing</button> 
  <p>Did you like your fun thing???
  <p>yes<input type="checkbox">
   <p>no<input type="checkbox">
    <button type="button" onclick="alert('you submit your answer ')">submit</button>  
           <p> (sources:<input type="range"><input type="datetime-local">) <p>
-   <p>Always keep this link to stay updated: <p><a href="https://superfunnydragon0294.github.io/HTML5/">https://superfunnydragon0294.github.
+       <a href="GameOfNumbers.html">Let's play with numbers</a>
 </body>
 </html>
