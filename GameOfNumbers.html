@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Let's have fun with numbers.</title>
+        <title>Numbers can be fun.</title>
         <script>
             function isodd() {
                 if (bignumber.value % 2 == 0) {
-                    alert("The number " + bignumber.value + " is even");
+                    alert("The number is even.");
                 } else {
-                    alert("The number " + bignumber.value + " is odd");
+                    alert("The number is odd.");
                 }
+            }
+            function divisable3() {
+                let divident = 3;
+                if (bignumber.value % divident == 0) {
+                    alert("The number can be divided by 3.");
+                } else {
+                    alert("The number cannot be divided by 3.");
+                }
+            }
+            function autofill() {
+                let ran = Math.random() * 5000;
+                let big = Math.round(ran);
+                bignumber.value = big;
             }
         </script>
     </head>
 
     <body>
-        <h1 style="color: cyan;">Numbers are also fun.</h1>
+        <h1 style="color: green;">Lets have fun with numbers.</h1>
 
-        <p>Please enter a number.</p>
+        <p>Start by entering a number.</p>
         <input type="number" id="bignumber" />
-        <button onclick="isodd()">Is the number odd?</button><br />
+        <button onclick="autofill()">random numbers</button>
+        <p></p>
+        <p><button onclick="divisable3()">Is the number divisable by 3?</button><br /></p>
+        <p><button onclick="isodd()">Is the number even or odd?</button><br /></p>
+        <p><button onclick="isSquare()">Is the number perfect square?</button><br /></p>
     </body>
 </html>
