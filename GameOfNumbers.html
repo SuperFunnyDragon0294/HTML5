@@ -1,55 +1,74 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Numbers can be fun.</title>
-        <script>
-            function isodd() {
-                if (bignumber.value % 2 == 0) {
-                    alert("The number"+bignumber.value+"  is even.");
-                } else {
-                    alert("The number "+bignumber.value+"  is odd.");
-                }
-            }
-            function divisable3() {
-                let divident = 3;
-                if (bignumber.value % divident == 0) {
-                    alert("The number "+bignumber.value+" can be divided by 3.");
-                } else {
-                    alert("The number "+bignumber.value+" cannot be divided by 3.");
-                }
-            }
-            function autofill() {
-                let ran = Math.random() * 5000;
-                let big = Math.round(ran);
-                bignumber.value = big;
-            }
-        function isSquare() {
-              let sq=bignumber.value
-              let root=Math.sqrt (sq)
-              if(Number.isInteger(root)){alert("yes the number "+sq+" is square")}
-             else{alert("No the number "+sq+" is not square")
+<head>
+<title>Let's have fun with numbers.</title>
+<script>
+function isodd() {
+if (bignumber.value % 2 == 0) {
+alert("The number is even.");
+} else {
+alert("The number is odd.");
 }
-           }
-      function isInteger(num){
-if (num==Math.round(num))
-alert("The number "+bignumber.value+" is an integer")
+}
+function divisable3() {
+let divident = 3;
+if (bignumber.value % divident == 0) {
+alert("The number can be divided by 3.");
+} else {
+alert("The number cannot be divided by 3.");
+}
+}
+function autofill() {
+let ran = Math.random() * 5000;
+let big = Math.round(ran);
+bignumber.value = big;
+}
+function issquare() {
+let sq = bignumber.value;
+let root = Math.sqrt(sq);
+if (Number.isInteger(root)) {
+alert("Yes the number is square.");
+} else {
+alert("No the number is not square.");
+}
+}
+function isInteger(num) {
+if (1 * num == Math.round(1 * num)) {
+return true;
+} else {
+return false;
+}
+}
+function isPositive(num) {
+if (num >= 0) {
+return true;
+} else {
+return false;
+}
+}
+function isCube() {
+let cb = bignumber.value;
+let root = Math.cbrt(cb);
+if (Number.isInteger(root)) {
+alert("Yes the number is cube");
+} else {
+alert("No the number is not cube");
+}
+}
+</script>
+</head>
 
-      
-    else alert("The number "+bignumber.value+" is not an integer")
-      }
-        </script>
-    </head>
-
-    <body>
-        <h1 style="color: green;">Lets have fun with numbers.</h1>
-
-        <p>Start by entering a number.</p>
-        <input type="number" id="bignumber" />
-        <button onclick="autofill()">random numbers</button>
-        <p></p>
-        <p><button onclick="divisable3()">Is the number divisable by 3?</button><br /></p>
-        <p><button onclick="isodd()">Is the number even or odd?</button><br /></p>
-        <p><button onclick="isSquare()">Is the number perfect square?</button><br /></p>
-        <p><button onclick="isInteger(bignumber.value)">Is the number a integer?</button><br /></p>
-    </body>
+<body>
+<h1 style="color: green;">Lets have fun with numbers.</h1>
+<p>Start by entering a number.</p>
+<input type="number" id="bignumber" />
+<button onclick="autofill()">Random number.</button>
+<p><button onclick="divisable3()">Is the number divisable by 3?</button><br /></p>
+<p><button onclick="isodd()">Is the number even or odd?</button><br /></p>
+<p><button onclick="issquare()">Is the number a perfect square?</button><br /></p>
+<p><button onclick="alert(isInteger(bignumber.value))">Is the number a integer?</button></p>
+<p><button onclick="alert(isPositive (bignumber.value))">Is the number positive?</button></p>
+<p><button onclick="isCube()">Is the number a perfect cube?</button><br /></p>
+</body>
 </html>

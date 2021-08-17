@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter.</title>
+        Press Enter After You Insert A Number (Try 32 First)
+        <script>
+            function FtoC(fahr) {
+                cel = ((fahr - 32) * 5) / 9;
+                return cel;
+            }
+            function converterF() {
+                F = Fahrenheit.value;
+                Celsius.value=FtoC(F).toFixed(1);         
+            }
+            function CtoF(cel) {
+                fahr = (cel * 9) / 5 + 32;
+                return fahr;
+            }
+            function converterC() {
+                C = Celsius.value;
+                Fahrenheit.value = CtoF(C).toFixed(1);
+            }
+            function ItoC(inch){
+          cm=(inch/2.54)
+          return cm;
+        }
+        function converterItoC(){
+          i=Inch.value
+          Centimeter.value=ItoC(i).toFixed(2);
+        }
+        function CtoI(cm){
+          inch=(cm*2.54)
+          return inch
+        }
+        function converterCtoI(){
+          c=Centimeter.value
+          c=Inch.value=CtoI(c).toFixed(2);
+        }
+
+
+
+         function GtoL(gal) {
+                liter = (gal * 3.785) ;
+                return liter;
+            }
+            function converterG() {
+                G = Gallon.value;
+                Liter.value=GtoL(G).toFixed(1);         
+            }
+            function LtoG(liter) {
+                gal = (liter /3.78541) ;
+                return gallon;
+            }
+            function converterL() {
+                L = Liter.value;
+                Gallon.value = LtoG(L).toFixed(1);
+            }
+
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <h1>This is a converter</h1>
+        <table style="width: 100%;">
+            <tr>
+                <th>Fahrenheit</th>
+                <th>Celsius</th>
+            </tr>
+            <tr>
+                <td><input type="number" id="Fahrenheit" onchange="converterF()" /></td>
+                <td><input type="number" id="Celsius" onchange="converterC()" /></td>
+            </tr>
+
+            <tr>
+                <td>Inch</td>
+                <td>Centimeter</td>
+            </tr>
+
+            <tr>
+                <td><input type="number" id="Centimeter" onchange="converterCtoI()" /></td>
+                <td><input type="number" id="Inch" onchange="converterItoC()" /></td>
+            </tr>
+             
+            <tr>
+                <td>Gallon</td>
+                <td>Liter</td>
+            </tr>
+
+            <tr>
+                <td><input type="number" id="liter" onchange="converterLtoG()" /></td>
+                <td><input type="number" id="gallon" onchange="converterGtoL()" /></td>
+            </tr>
+        </table>
+    </body>
+</html>
